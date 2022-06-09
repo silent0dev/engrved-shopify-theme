@@ -1,0 +1,155 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+
+        jQuery(function() {
+            var $module = jQuery('#m-1557415361121').children('.module');
+        }); 
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1557415361060').children('.module');
+        }); 
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1557415361156').children('.module');
+            $module.gfV3Product();
+        }); 
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1557415361156-0').children('.module');
+            var effect = $module.attr('data-effect');
+            $module.gfV3ProductImage({
+                'effect': effect
+            })
+        }); 
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1557415361135').children('.module');
+        }); 
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1557415361171').children('.module');
+            $module.gfV3ProductPrice();
+        }); 
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1557415361082').children('.module');
+            var swatchText = $module.attr('data-swatch-text') != undefined ? $module.attr('data-swatch-text') : '1';
+            $module.gfV3ProductSwatches({
+                swatchText: swatchText,
+                onSwatchSelected: function(variant, $swatch) {}
+            });
+        }); 
+    
+        jQuery(function() {
+            var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+            var $module = jQuery('#m-1557415433581').children('.module');
+            if (mode == 'dev') {
+                jQuery('#m-1557415433581').attr('data-name', '');
+                jQuery('#m-1557415433581').css('background-image', 'none');
+                jQuery('#m-1557415433581').css('min-height', '50px');
+                jQuery('#m-1557415433581').removeAttr('data-image');
+                
+                var flag = true;
+                var $bkLiquid = parent.jQuery('body').find('#gfFrame').contents().find('#module-1557415433581');
+                if ($bkLiquid && $bkLiquid.length > 0) {
+                    var $settings = $bkLiquid.find('.settings');
+                    try {
+                        var name = '';
+                        var imageUrl = '';
+                        settings = JSON.parse($settings.html());
+                        for (var i = 0; i < settings.length; i++) {
+                            if (settings[i].name == 'name') {
+                                name = settings[i].default_value
+                            }
+                            if (settings[i].name == 'image') {
+                                imageUrl = settings[i].default_value
+                            }
+                        }
+                        if (imageUrl != '') {
+                            flag = false;
+                            jQuery('#m-1557415433581').css('background-image', 'url(' + imageUrl + ')');
+                            jQuery('#m-1557415433581').css('min-height', '100px');
+                            jQuery('#m-1557415433581').attr('data-image', 'true');
+                        }
+                        if (name != '' && name != 'Custom Code') {
+                            flag = false;
+                            jQuery('#m-1557415433581').attr('data-name', name);
+                        }
+                    } catch(error) {
+                        console.log(error);
+                    }
+                }
+                if (flag) {
+                    jQuery('#m-1557415433581').attr('data-name', 'Right click on the module, then choose Edit Html / Liquid option to start writing your custom code.');
+                }
+            }
+
+        }); 
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1557415361077').children('.module');
+            var style = $module.attr('data-style');
+            var updatePrice = $module.attr('data-updateprice');
+
+            $module.gfV3ProductQuantity({
+                'style': style,
+                'updatePrice': updatePrice
+            });
+        }); 
+    
+        jQuery(function() {
+            var $module = jQuery('#m-1557415361096').children('.module');
+            $module.gfV3ProductCartButton({ onItemAdded: function() {}});
+        }); 
+    
+        jQuery(function() {
+            var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+            var $module = jQuery('#m-1557415361118').children('.module');
+            if (mode == 'dev') {
+                jQuery('#m-1557415361118').attr('data-name', '');
+                jQuery('#m-1557415361118').css('background-image', 'none');
+                jQuery('#m-1557415361118').css('min-height', '50px');
+                jQuery('#m-1557415361118').removeAttr('data-image');
+                
+                var flag = true;
+                var $bkLiquid = parent.jQuery('body').find('#gfFrame').contents().find('#module-1557415361118');
+                if ($bkLiquid && $bkLiquid.length > 0) {
+                    var $settings = $bkLiquid.find('.settings');
+                    try {
+                        var name = '';
+                        var imageUrl = '';
+                        settings = JSON.parse($settings.html());
+                        for (var i = 0; i < settings.length; i++) {
+                            if (settings[i].name == 'name') {
+                                name = settings[i].default_value
+                            }
+                            if (settings[i].name == 'image') {
+                                imageUrl = settings[i].default_value
+                            }
+                        }
+                        if (imageUrl != '') {
+                            flag = false;
+                            jQuery('#m-1557415361118').css('background-image', 'url(' + imageUrl + ')');
+                            jQuery('#m-1557415361118').css('min-height', '100px');
+                            jQuery('#m-1557415361118').attr('data-image', 'true');
+                        }
+                        if (name != '' && name != 'Custom Code') {
+                            flag = false;
+                            jQuery('#m-1557415361118').attr('data-name', name);
+                        }
+                    } catch(error) {
+                        console.log(error);
+                    }
+                }
+                if (flag) {
+                    jQuery('#m-1557415361118').attr('data-name', 'Right click on the module, then choose Edit Html / Liquid option to start writing your custom code.');
+                }
+            }
+
+        }); 
+    

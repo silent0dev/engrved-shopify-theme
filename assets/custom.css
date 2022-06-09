@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'GOTHIC';
+    src:  url('GOTHIC.woff') format('woff');
+}
+@font-face {
+    font-family: 'CenturyGothicStencil3';
+    src:  url('CenturyGothicStencil3.woff') format('woff');
+}
+@font-face {
+    font-family: 'CENTURY';
+    src:  url('CENTURY.woff') format('woff');
+}
+.preview_field {
+    font-size: 16px;
+    width: 100%;
+    border-radius: 0;
+    color: black;
+    margin-bottom: 25px;
+    padding: 5px 10px;
+}
+
+#productPreviewModal {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#productPreviewModal.active {
+    display: block;
+}
+
+#preview-address_name {
+    display: none;
+}
+
+#preview-address_name.active {
+    display: inline-block;
+}
+
+.productPreviewModal__content {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+}
+
+#open__preview {
+    margin-bottom: 25px;
+    background-color: #fff!important;
+    color: #dbb342!important;
+    border: 2px solid #dbb342!important;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.gempage #open__preview {
+    width: 100% !important;
+    font-size: 30px!important;
+    height: 70px!important;
+    line-height: 70px!important;
+    font-family: 'Montserrat'!important;
+    font-weight: bold!important;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+#open__preview:hover {
+    background-color: #efd07a!important;
+    color: #fff !important;
+    border-color: #efd07a !important;
+}
+
+.close__preview {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.close__preview svg {
+    width: 14px;
+    height: 14px;
+    margin-left: 2px;
+    margin-bottom: 3px;
+}
+
+#previewCanvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 800px) {
+    .productPreviewModal__content {
+    width: 90%;
+    }
+}
+
+.ProductForm__AddToCart {
+    background-color: #dbb342!important;
+    color: #ffffff!important;
+    border-color: #ffffff!important;
+    font-size: 18px;
+}
+
+.ProductForm__AddToCart:hover {
+    background-color: #efd07a !important;
+}
+
+klarna-placement div  {
+    margin-top: 25px;
+    max-width: 355px;
+}
+
+klarna-placement {
+    justify-content: flex-start !important;
+}
+
+.template-cart klarna-placement div  {
+    margin: 0 0 15px;
+}
+
+.template-cart klarna-placement {
+    justify-content: flex-end !important;
+}
+
+@media (max-width: 768px) {
+    klarna-placement  {
+        justify-content: center !important;
+    }
+
+    klarna-placement div  {
+        max-width: 100%;
+    }
+}

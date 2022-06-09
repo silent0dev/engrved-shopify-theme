@@ -1,0 +1,27 @@
+{% comment %} == BEGIN CUSTOM PRODUCT BUILDER GENERATED CODE. DO NOT EDIT OR REMOVE. == {% endcomment %}
+{% if product.type == 'cpb_product' %}
+    {% assign productId = product.id | append: '' %}
+
+    {{ '//cdn.shopify.com/s/assets/external/app.js' | script_tag}}
+    {{'https://cdn.thecustomproductbuilder.com/dist/latest/custom-product-builder.js' | script_tag}}
+    {{'https://cdn.thecustomproductbuilder.com/dist/latest/customizer-theme-main.js'| script_tag}}
+    {{ 'customproductbuilder.css' | asset_url | stylesheet_tag }}
+
+    <div
+      id="product-builder"
+      data-engine="shopify"
+      data-shop-name="{{shop.permanent_domain}}"
+      data-product-id="{{productId}}"
+      data-styles-path="{{'customproductbuilder.css' | asset_url }}"
+      data-config-path="{{product.metafields.customproductbuilder['configurableUrl']}}"
+      data-cpb-user-id="{{customer.id}}"
+      data-customer-id="{{customer.id}}"
+      product-handle="{{product.handle}}"></div>
+
+      {{ customproductbuilder.js | asset_url | script_tag }}
+
+{% else %}
+    {% section 'product-template' %}
+{% endif %}
+{% comment %} NEW CDN {% endcomment %}
+{% comment %} == END CUSTOM PRODUCT BUILDER GENERATED CODE. DO NOT EDIT OR REMOVE. == {% endcomment %}

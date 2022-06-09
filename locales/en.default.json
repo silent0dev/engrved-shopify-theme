@@ -1,0 +1,612 @@
+{
+  "general": {
+    "meta": {
+      "tags": "Tagged \"{{ tags }}\"",
+      "page": "Page {{ page }}"
+    },
+    "accessibility": {
+      "scroll_to_content": "Scroll to content",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "announcement_bar": {
+      "close": "Close"
+    },
+    "popup": {
+      "close": "Close",
+      "email_placeholder": "Enter your email",
+      "submit": "Subscribe",
+      "success": "You have been subscribed to our newsletter."
+    },
+    "password": {
+      "enter_password": "Enter password",
+      "password_input": "Your password",
+      "password_submit": "Enter",
+      "newsletter_input": "Your email address",
+      "newsletter_submit": "Notify me",
+      "newsletter_success": "Thanks for signing up!",
+      "powered_by_html": "This store will be powered by {{shopify_link}}",
+      "login_title": "Are you the store owner?",
+      "login_link": "Login here"
+    },
+    "pagination": {
+      "previous_page": "Previous page",
+      "next_page": "Next page",
+      "go_to_page": "Navigate to page {{page}}"
+    }
+  },
+  "header": {
+    "general": {
+      "locale": "Language",
+      "currency": "Currency"
+    },
+    "navigation": {
+      "title": "Main navigation",
+      "sidebar_title": "Sidebar navigation",
+      "open_sidebar": "Open navigation",
+      "close_sidebar": "Close navigation",
+      "account": "Account",
+      "search": "Search",
+      "cart": "Cart",
+      "open_cart": "Open cart",
+      "close_cart": "Close cart",
+      "skip_to_content": "Skip to content",
+      "currency_selector": "Currency selector"
+    }
+  },
+  "footer": {
+    "general": {
+      "locale": "Language",
+      "currency": "Currency"
+    },
+    "newsletter": {
+      "success": "You have been subscribed to our newsletter.",
+      "input": "Enter your email address",
+      "submit": "Subscribe"
+    }
+  },
+  "search": {
+    "general": {
+      "title": "Search",
+      "content": "Enter a word to search our products:",
+      "input_placeholder": "Search...",
+      "view_all": "View all",
+      "no_results": "No results could be found",
+      "no_results_with_terms": "No results could be found for {{terms}}",
+      "pages": "Pages",
+      "articles": "Journal",
+      "pages_and_articles": "Pages & Journal",
+      "results_count": {
+        "zero": "Products",
+        "one": "1 result",
+        "other": "{{count}} results"
+      },
+      "results_with_terms_count": {
+        "zero": "0 results for \"{{terms}}\"",
+        "one": "1 result for \"{{terms}}\"",
+        "other": "{{count}} results for \"{{terms}}\""
+      }
+    }
+  },
+  "404": {
+    "general": {
+      "title": "404",
+      "content": "The page you are looking for cannot be found.",
+      "button": "Back to homepage"
+    }
+  },
+  "home_page": {
+    "onboarding": {
+      "vendor_title": "Brand's name",
+      "product_title": "Product's name",
+      "product_description": "A product description can be used to showcase the features and advantages of your product. You can check out Shopify's ecommerce blog for inspiration and advice for properly market your products.",
+      "collection_title": "Collection's name",
+      "article_name": "Post's name",
+      "article_category": "Category",
+      "article_excerpt": "Your store hasn’t published any blog posts yet. A blog can be used to talk about new product launches, tips, or other news you want to share with your customers. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and blog."
+    },
+    "featured_product": {
+      "view_product": "View product details"
+    },
+    "shop_the_look": {
+      "view_product": "View this product",
+      "view_products": "View products",
+      "popover_title": "Shop the look"
+    },
+    "featured_video": {
+      "play": "Play video"
+    },
+    "newsletter": {
+      "input": "Enter your email",
+      "submit": "Subscribe",
+      "success": "You have been subscribed to our newsletter."
+    }
+  },
+  "collection_list": {
+    "general": {
+      "title": "All collections",
+      "empty_title": "No collections",
+      "empty_button": "Back to homepage"
+    }
+  },
+  "collection": {
+    "general": {
+      "all_products": "All products",
+      "no_products": "No products",
+      "empty": "Collection {{collection_title}} is empty",
+      "empty_button": "Back to homepage",
+      "reset": "Reset filters",
+      "view_products": "View products"
+    },
+    "filter": {
+      "title": "Filter",
+      "show_filter": "Show filters",
+      "all": "Filters",
+      "reset": "Reset",
+      "apply": "Apply"
+    },
+    "sorting": {
+      "title": "Sort",
+      "show_sort": "Show sort by"
+    },
+    "layout": {
+      "show_one_per_row": "Show one product per row",
+      "show_two_per_row": "Show two products per row",
+      "show_four_per_row": "Show four products per row"
+    },
+    "product": {
+      "from_price_html": "From {{min_price}}",
+      "view_product": "View product"
+    }
+  },
+  "customer": {
+    "account": {
+      "title": "My account",
+      "welcome": "Welcome back, {{first_name}}!",
+      "logout": "Logout",
+      "back_to_account": "Back to account",
+      "no_orders_title": "My orders",
+      "no_orders_content": "You haven't placed any orders yet",
+      "no_addresses_title": "No addresses",
+      "no_addresses_content": "No addresses are currently saved",
+      "default_address": "Primary address",
+      "edit_addresses": "Edit addresses",
+      "manage_addresses": "Manage addresses"
+    },
+    "login": {
+      "title": "Login",
+      "description": "Please enter your e-mail and password:",
+      "email": "Email",
+      "password": "Password",
+      "forgot": "Forgot password?",
+      "submit": "Login",
+      "register_label": "Don't have an account?",
+      "register_link": "Create one"
+    },
+    "orders": {
+      "order_number": "Order",
+      "date": "Date",
+      "payment_status": "Payment status",
+      "fulfillment_status": "Fulfillment status",
+      "total": "Total"
+    },
+    "order": {
+      "title": "Order {{order_number}}",
+      "back_to_account": "Back to account",
+      "cancelled_at": "Order cancelled on {{ date }}",
+      "placed_at": "Order placed on {{ date }}",
+      "fulfillment_html": "Your order has been sent. Track the shipment with number {{tracking_number}} or by clicking here: <a href=\"{{tracking_url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">{{tracking_url}}<\/a>",
+      "line_fulfillment_html": "Your product \"{{product_title}}\" has been sent. Track the shipment with number {{tracking_number}} or by clicking here: <a href=\"{{tracking_url}}\" class=\"Link Link--underlineNative\" target=\"_blank\">{{tracking_url}}<\/a>",
+      "product": "Product",
+      "quantity": "Quantity",
+      "line_price": "Total",
+      "subtotal": "Subtotal",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "tax": "Tax",
+      "total": "Total",
+      "shipping_address": "Shipping address",
+      "billing_address": "Billing address",
+      "no_shipping_address": "No shipping address was required for this order."
+    },
+    "activate_account": {
+      "title": "Activate account",
+      "description": "Please enter a password to create your account:",
+      "password": "Password",
+      "password_confirmation": "Confirm password",
+      "submit": "Activate",
+      "decline": "Decline"
+    },
+    "recover_password": {
+      "title": "Recover password",
+      "description": "Please enter your email:",
+      "email": "Email",
+      "submit": "Recover",
+      "success": "We have sent you an email with instructions to reset your password.",
+      "login_label": "Remember your password?",
+      "login_link": "Back to login"
+    },
+    "reset_password": {
+      "title": "Reset password",
+      "description": "Please enter a new password:",
+      "password": "Password",
+      "password_confirmation": "Confirm password",
+      "submit": "Reset"
+    },
+    "addresses": {
+      "title": "My addresses",
+      "empty": "No addresses were saved yet",
+      "edit": "Edit",
+      "delete": "Delete",
+      "add_address": "Add a new address",
+      "edit_address": "Edit an address",
+      "form_subtitle": "Please fill in the information below:",
+      "default_address_label": "Default address",
+      "address_label": "Address {{position}}",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "company": "Company",
+      "address1": "Address 1",
+      "address2": "Address 2",
+      "city": "City",
+      "country": "Country",
+      "province": "Province",
+      "zip": "Zip code",
+      "phone": "Phone",
+      "set_default": "Set as default address"
+    },
+    "register": {
+      "title": "Register",
+      "description": "Please fill in the information below:",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create my account"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Cart",
+      "empty": "Your cart is empty",
+      "empty_button": "Shop our products",
+      "add_note": "Add Order Note",
+      "edit_note": "Edit Order Note",
+      "save_note": "Save",
+      "note_placeholder": "How can we help you?",
+      "free_shipping": "You are eligible for free shipping!",
+      "free_shipping_remaining_html": "Spend {{remaining_amount}} more and get free shipping!",
+      "shipping_and_taxes_notice": "Shipping & taxes calculated at checkout",
+      "discount": "Discount",
+      "total": "Total",
+      "checkout": "Checkout"
+    },
+    "items": {
+      "product": "Product",
+      "quantity": "Quantity",
+      "total": "Total",
+      "set_quantity": "Set quantity to {{new_quantity}}",
+      "remove": "Remove"
+    },
+    "shipping_estimator": {
+      "title": "Estimate shipping",
+      "country": "Country",
+      "province": "Province",
+      "zip_code": "Zip code",
+      "estimate": "Estimate",
+      "one_result_title": "1 option available:",
+      "more_results_title": "{{count}} options available:",
+      "no_results_title": "No shipping could be found"
+    }
+  },
+  "product": {
+    "general": {
+      "view_in_space": "View in your space"
+    },
+    "labels": {
+      "sold_out": "Sold out",
+      "on_sale": "On sale"
+    },
+    "slideshow": {
+      "close": "Close (Esc)",
+      "previous": "Previous (left arrow)",
+      "next": "Next (right arrow)",
+      "image_loading_error": "This image could not be loaded. Please try to reload the page."
+    },
+    "form": {
+      "variant_label": "Variant",
+      "sku": "SKU",
+      "share": "Share",
+      "price": "Price",
+      "quantity": "Quantity",
+      "from_price_html": "From {{min_price}}",
+      "select_model": "Select this model",
+      "size_chart": "Size chart",
+      "inventory_quantity_count": {
+        "one": "{{count}} piece in stock.",
+        "other": "{{count}} pieces in stock"
+      },
+      "low_inventory_quantity_count": {
+        "one": "Only {{count}} piece in stock!",
+        "other": "Only {{count}} pieces in stock!"
+      },
+      "add_to_cart": "Add to cart",
+      "sold_out": "Sold Out",
+      "pre_order": "Pre-order",
+      "unavailable": "Unavailable",
+      "view_info": "More information",
+      "view_images": "View images"
+    },
+    "tabs": {
+      "reviews": "Reviews"
+    },
+    "buy_it_with": {
+      "title": "Buy it with"
+    }
+  },
+  "gift_card": {
+    "issued": {
+      "subtext": "Here's your gift card!",
+      "illustration_alt": "Gift card illustration",
+      "disabled": "Your gift card is disabled.",
+      "expired": "Your gift card expired on {{ expiry }}.",
+      "expires_on": "Your gift card expires on {{ expiry }}.",
+      "redeem_html": "Use this code at checkout to redeem your gift card, or {{print_link}} this page.",
+      "shop_link": "Start shopping",
+      "print": "print",
+      "initial_amount_html": "Amount: {{initial_amount}}",
+      "remaining_balance_html": "Balance left: {{balance}}",
+      "add_to_apple_wallet": "Add to Apple Wallet"
+    }
+  },
+  "blog": {
+    "general": {
+      "no_articles": "Blog {{blog_title}} is empty",
+      "empty_button": "Back to homepage",
+      "all_tag": "All"
+    },
+    "article": {
+      "read_more": "Read more",
+      "written_by": "Written by {{author}}",
+      "now_reading": "Now reading:",
+      "share": "Share",
+      "previous": "Prev",
+      "next": "Next",
+      "comments_count": {
+        "zero": "{{count}} comments",
+        "one": "{{count}} comment",
+        "other": "{{count}} comments"
+      }
+    },
+    "comments": {
+      "form_title": "Leave a comment",
+      "name_placeholder": "Name",
+      "email_placeholder": "Email",
+      "comment_placeholder": "Content",
+      "approval_notice": "All comments are moderated before being published",
+      "submit": "Post comment",
+      "success": "Your comment has been published.",
+      "success_moderated": "Your comment has been sent. It will be visible once the shop owner has accepted it!"
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "message": "Your message",
+      "submit": "Send message",
+      "successfully_sent": "Your message has been successfully sent."
+    }
+  },
+  "date_formats": {
+    "month_day_year": "%B %d, %Y",
+    "month_day_year_short": "%m\/%d\/%Y",
+    "month_day_year_time": "%B %d, %Y at %I:%M%p"
+  },
+  "shopify": {
+    "checkout": {
+      "contact": {
+        "phone_label": "Phone - Receive SMS support, updates and offers from our team.",
+        "optional_phone_label": "Cell Phone - exclusive offers (per checkbox above)"
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "I agree to receive emails and recurring automated text messages at the email and the phone number provided. Message & data rates may apply."
+      }
+    }
+  },
+  "sections": {
+    "product-template-shineon-e-and-g-upsell": {
+      "price_label": "Your price:",
+      "purchase_form_copy_option1_label": "Select your style",
+      "purchase_form_copy_option1_metal_label": "Select your metal",
+      "purchase_form_copy_option1_metal_gold_label": "18K Gold Finish",
+      "purchase_form_copy_option1_metal_silver_label": "Silver",
+      "purchase_form_copy_option1_metal_stainless_label": "Stainless",
+      "purchase_form_engraving_copy_option2_label": "Add Engraving + $15",
+      "purchase_form_engraving_copy_option2_label_cross": "Add Engraving + $20",
+      "purchase_form_engraving_copy_option2_label_ring": "Add Engraving + $25",
+      "purchase_form_engraving_copy_option_yes_label": "Yes",
+      "purchase_form_engraving_copy_option_no_label": "No",
+      "purchase_form_engraving_copy_line_label": "Engraving Line",
+      "purchase_form_engraving_copy_side_label": "Engraving Side",
+      "purchase_form_engraving_copy_line1_label": "Engraving Line 1",
+      "purchase_form_engraving_copy_line2_label": "Engraving Line 2",
+      "purchase_form_engraving_copy_line1_label_cross": "FRONT - TWO LETTERS OR #",
+      "purchase_form_engraving_copy_line2_label_cross": "BACK - UP TO 20 LETTERS OR #",
+      "purchase_form_engraving_copy_line1_label_ring": "LEFT SIDE",
+      "purchase_form_engraving_copy_line2_label_ring": "RIGHT SIDE",
+      "purchase_form_add_to_cart_button_text_item_label_singular": "item",
+      "purchase_form_add_to_cart_button_text_item_label_plural": "items",
+      "save_html": "You Save: <strong><span class='saved-amount-money'>{{ saved_amount_money }}<\/span> (<span class='saved-amount-percent'>{{saved_amount_percent}}<\/span>%)<\/strong>",
+      "buyer_upload_progress_step1": "Upload Photo",
+      "buyer_upload_progress_step2": "Confirm Design",
+      "buyer_upload_progress_step3": "Customization",
+      "buyer_upload_button_text": "UPLOAD YOUR PHOTO",
+      "buyer_upload_button_info_text": "Zoom or Rotate Your Image With Our Tool",
+      "buyer_upload_confirm_btn_text": "Confirm design",
+      "buyer_upload_mobile_info_drag_or_pinch_msg": "Drag or pinch with fingers to adjust",
+      "buyer_upload_btn_upload_new": "Change Image",
+      "buyer_upload_btn_confirm_design": "Confirm Design",
+      "buyer_upload_btn_uploading_copy": "Uploading your image",
+      "purchase_form_copy_compare_at_savings_verb": "Save",
+      "purchase_form_engraving_copy_line1_placeholder": "Your words here",
+      "purchase_form_engraving_copy_line2_placeholder": "Your words here",
+      "purchase_form_engraving_copy_line3_label": "Engraving Line 3",
+      "purchase_form_engraving_copy_line3_placeholder": "Your words here",
+      "purchase_form_engraving_copy_line4_label": "Engraving Line 4",
+      "purchase_form_engraving_copy_line4_placeholder": "Your words here",
+      "purchase_form_engraving_copy_line1_placeholder_cross": "",
+      "purchase_form_engraving_copy_line2_placeholder_cross": "Your words here",
+      "purchase_form_engraving_copy_line1_placeholder_ring": "Your words here",
+      "purchase_form_engraving_copy_line2_placeholder_ring": "Your words here",
+      "purchase_form_quantity_copy": "Quantity",
+      "purchase_form_out_of_stock": "Out of Stock",
+      "purchase_form_add_to_cart_text": "Add to cart",
+      "purchase_form_description_tab_title": "Information",
+      "purchase_form_delivery_tab_title": "Shipping",
+      "purchase_form_guarantee_tab_title": "Guarantees",
+      "purchase_form_ring_size_choose": "Choose your ring size (US)",
+      "purchase_form_ring_size_please_select": "Click here to choose",
+      "purchase_form_ring_size_help_link": "#help-me-find-my-ring-size",
+      "purchase_form_ring_size_help_copy": "(help me)",
+      "purchase_form_ring_size3": "Size 3",
+      "purchase_form_ring_size4": "Size 4",
+      "purchase_form_ring_size5": "Size 5",
+      "purchase_form_ring_size6": "Size 6",
+      "purchase_form_ring_size7": "Size 7",
+      "purchase_form_ring_size8": "Size 8",
+      "purchase_form_ring_size9": "Size 9",
+      "purchase_form_ring_size10": "Size 10",
+      "purchase_form_ring_size11": "Size 11",
+      "purchase_form_ring_size12": "Size 12",
+      "purchase_form_ring_size13": "Size 13",
+      "purchase_form_ring_atc_choose": "Select Your Size Above",
+      "purchase_form_ring_btn_fmrs": "Find size",
+      "purchase_form_modal_made_in": "| Made In",
+      "purchase_form_modal_added_in_cart": "Added In Cart",
+      "purchase_form_modal_callout_primary": "Add a PERSONAL MESSAGE and GOLD FINISH",
+      "purchase_form_modal_callout_engraving_primary": "Want to engrave a message on the back?",
+      "purchase_form_modal_callout_primary_html": "Add a Mahogany-Style Luxury Gift Box",
+      "purchase_form_modal_callout_gold_html": "Upgrade to 18k Gold Finish?",
+      "purchase_form_modal_callout_engraving_secondary": "##% Off - One-Time Offer!",
+      "purchase_form_modal_callout_gold_primary": "2. 18K Gold Finish",
+      "purchase_form_modal_callout_gold_secondary": "##% Off - One-Time Offer!",
+      "purchase_form_modal_gold_checkbox": "Add 18K Gold Finish",
+      "purchase_form_modal_customize": "Customize Above",
+      "purchase_form_modal_then": "Then",
+      "purchase_form_modal_proceed": "Proceed",
+      "purchase_form_modal_continue_without": "Continue Without Customization",
+      "purchase_form_modal_proceed_with_upsell": "YES, I'LL TAKE IT",
+      "purchase_form_modal_continue_without_upsell": "No Thanks!",
+      "purchase_form_btn_add_to_cart_sold": "Sold Out"
+    },
+    "product-template-shineon": {
+      "price_label": "Your price:",
+      "purchase_form_copy_option1_label": "Select your style",
+      "purchase_form_copy_option1_metal_label": "Select your metal",
+      "purchase_form_copy_option1_metal_gold_label": "18K Gold Finish",
+      "purchase_form_copy_option1_metal_silver_label": "Silver",
+      "purchase_form_copy_option1_metal_stainless_label": "Stainless",
+      "purchase_form_engraving_copy_option2_label": "Add Engraving + $15",
+      "purchase_form_engraving_copy_option2_label_cross": "Add Engraving + $20",
+      "purchase_form_engraving_copy_option2_label_ring": "Add Engraving + $25",
+      "purchase_form_engraving_copy_option_yes_label": "Yes",
+      "purchase_form_engraving_copy_option_no_label": "No",
+      "purchase_form_engraving_copy_line_label": "Engraving Line",
+      "purchase_form_engraving_copy_side_label": "Engraving Side",
+      "purchase_form_engraving_copy_line1_label": "Engraving Line 1",
+      "purchase_form_engraving_copy_line2_label": "Engraving Line 2",
+      "purchase_form_engraving_copy_line1_label_cross": "FRONT - TWO LETTERS OR #",
+      "purchase_form_engraving_copy_line2_label_cross": "BACK - UP TO 20 LETTERS OR #",
+      "purchase_form_engraving_copy_line1_label_ring": "LEFT SIDE",
+      "purchase_form_engraving_copy_line2_label_ring": "RIGHT SIDE",
+      "purchase_form_add_to_cart_button_text_item_label_singular": "item",
+      "purchase_form_add_to_cart_button_text_item_label_plural": "items",
+      "save_html": "You Save: <strong><span class='saved-amount-money'>{{ saved_amount_money }}<\/span> (<span class='saved-amount-percent'>{{saved_amount_percent}}<\/span>%)<\/strong>",
+      "buyer_upload_progress_step1": "Upload Photo",
+      "buyer_upload_progress_step2": "Confirm Design",
+      "buyer_upload_progress_step3": "Customization",
+      "buyer_upload_button_text": "UPLOAD YOUR PHOTO",
+      "buyer_upload_button_info_text": "Zoom or Rotate Your Image With Our Tool",
+      "buyer_upload_confirm_btn_text": "Confirm design",
+      "buyer_upload_mobile_info_drag_or_pinch_msg": "Drag or pinch with fingers to adjust",
+      "buyer_upload_btn_upload_new": "Change Image",
+      "buyer_upload_btn_confirm_design": "Confirm Design",
+      "buyer_upload_btn_uploading_copy": "Uploading your image",
+      "purchase_form_copy_compare_at_savings_verb": "Save",
+      "purchase_form_engraving_copy_line1_placeholder": "Your words here",
+      "purchase_form_engraving_copy_line2_placeholder": "Your words here",
+      "purchase_form_engraving_copy_line3_label": "Engraving Line 3",
+      "purchase_form_engraving_copy_line3_placeholder": "Your words here",
+      "purchase_form_engraving_copy_line4_label": "Engraving Line 4",
+      "purchase_form_engraving_copy_line4_placeholder": "Your words here",
+      "purchase_form_engraving_copy_line1_placeholder_cross": "",
+      "purchase_form_engraving_copy_line2_placeholder_cross": "Your words here",
+      "purchase_form_engraving_copy_line1_placeholder_ring": "Your words here",
+      "purchase_form_engraving_copy_line2_placeholder_ring": "Your words here",
+      "purchase_form_quantity_copy": "Quantity",
+      "purchase_form_out_of_stock": "Out of Stock",
+      "purchase_form_add_to_cart_text": "Add to cart",
+      "purchase_form_description_tab_title": "Information",
+      "purchase_form_delivery_tab_title": "Shipping",
+      "purchase_form_guarantee_tab_title": "Guarantees",
+      "purchase_form_ring_size_choose": "Choose your ring size (US)",
+      "purchase_form_ring_size_please_select": "Click here to choose",
+      "purchase_form_ring_size_help_link": "#help-me-find-my-ring-size",
+      "purchase_form_ring_size_help_copy": "(help me)",
+      "purchase_form_ring_size3": "Size 3",
+      "purchase_form_ring_size4": "Size 4",
+      "purchase_form_ring_size5": "Size 5",
+      "purchase_form_ring_size6": "Size 6",
+      "purchase_form_ring_size7": "Size 7",
+      "purchase_form_ring_size8": "Size 8",
+      "purchase_form_ring_size9": "Size 9",
+      "purchase_form_ring_size10": "Size 10",
+      "purchase_form_ring_size11": "Size 11",
+      "purchase_form_ring_size12": "Size 12",
+      "purchase_form_ring_size13": "Size 13",
+      "purchase_form_ring_atc_choose": "Select Your Size Above",
+      "purchase_form_ring_btn_fmrs": "Find size",
+      "purchase_form_modal_made_in": "| Made In",
+      "purchase_form_modal_added_in_cart": "Added In Cart",
+      "purchase_form_modal_callout_primary": "Add a PERSONAL MESSAGE and GOLD FINISH",
+      "purchase_form_modal_callout_engraving_primary": "Want to engrave a message on the back?",
+      "purchase_form_modal_callout_primary_html": "Add a Mahogany-Style Luxury Gift Box",
+      "purchase_form_modal_callout_gold_html": "Upgrade to 18k Gold Finish?",
+      "purchase_form_modal_callout_engraving_secondary": "##% Off - One-Time Offer!",
+      "purchase_form_modal_callout_gold_primary": "2. 18K Gold Finish",
+      "purchase_form_modal_callout_gold_secondary": "##% Off - One-Time Offer!",
+      "purchase_form_modal_gold_checkbox": "Add 18K Gold Finish",
+      "purchase_form_modal_customize": "Customize Above",
+      "purchase_form_modal_then": "Then",
+      "purchase_form_modal_proceed": "Proceed",
+      "purchase_form_modal_continue_without": "Continue Without Customization",
+      "purchase_form_modal_proceed_with_upsell": "YES, I'LL TAKE IT",
+      "purchase_form_modal_continue_without_upsell": "No Thanks!",
+      "purchase_form_btn_add_to_cart_sold": "Sold Out"
+    },
+    "cart-shineon": {
+      "shipping_taxes_info": "Shipping calculated at checkout",
+      "proceed_to_checkout_button_text": "Proceed To Checkout",
+      "checkout_button_or_addition": "OR",
+      "proceed_to_checkout_button_text_suffix_items": "items",
+      "cart_empty_title": "Your cart",
+      "cart_empty_message": "Your cart is currently empty.",
+      "cart_continue_btn_copy": "Continue shopping",
+      "cart_expire": "Cart reserved for",
+      "cart_expire_minutes": "minutes",
+      "items_with_count_html": {
+        "one": "<span class='cart-items-counter'>{{ count }}<\/span> item in your cart",
+        "other": "<span class='cart-items-counter'>{{ count }}<\/span> items in your cart"
+      },
+      "remove": "Remove",
+      "summary": "Summary",
+      "subtotal_title": "Total:",
+      "item_option_title": "Title",
+      "item_option_engraving": "Engraving",
+      "item_property_engraving-line-1": "Engraving Line 1",
+      "item_property_engraving-line-2": "Engraving Line 2",
+      "item_property_size-us": "Size (US)"
+    }
+  }
+}

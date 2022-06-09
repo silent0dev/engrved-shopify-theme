@@ -1,0 +1,152 @@
+var searchInterval = setInterval(searchElement, 500);
+
+function stopSearch() {
+    clearInterval(searchInterval);
+}
+
+function searchElement() {
+    if(document.getElementById('infiniteoptions-container').children.length > 0) {
+    stopSearch();
+    var $Submit = $('form[action="/cart/add"]').find('button[type="submit"]');
+    
+    if ($('body').hasClass('gempage')) {
+        var previewButton = `<button type="button" name="add" id="open__preview" class="product-form-product-template button btn gf_button-stretch">Live Preview</button>`;
+        $Submit.before(previewButton);
+    }
+    
+    var numberInput = document.getElementById('Numbers-0-0');
+    var addressInput = document.getElementById('Name-0-3');
+    var enableName = false, isCentered = true;
+    console.log($('input[name="alignNumber"]'));
+    var alignInputs = document.getElementById('infiniteoptions-container').children[1].querySelectorAll('input');
+    alignInputs[1].setAttribute('type', 'radio');
+    alignInputs[1].setAttribute('name', 'alignNumber');
+    alignInputs[1].setAttribute('checked', 'checked');
+    alignInputs[2].setAttribute('type', 'radio');
+    alignInputs[2].setAttribute('name', 'alignNumber');
+    alignInputs[0].value = alignInputs[1].value;
+    alignInputs[1].addEventListener("click", function(){
+        alignInputs[0].value = alignInputs[1].value;
+        isCentered = true;
+    });
+    alignInputs[2].addEventListener("click", function(){
+        alignInputs[0].value = alignInputs[2].value;
+        isCentered = false;
+    });
+    var enalbeInputs = document.getElementById('infiniteoptions-container').children[2].querySelectorAll('input');
+    enalbeInputs[1].setAttribute('type', 'radio');
+    enalbeInputs[1].setAttribute('name', 'enalbeName');
+    enalbeInputs[2].setAttribute('type', 'radio');
+    enalbeInputs[2].setAttribute('name', 'enalbeName');
+    enalbeInputs[2].setAttribute('checked', 'checked');
+    enalbeInputs[0].value = enalbeInputs[2].value;
+    enalbeInputs[1].addEventListener("click", function(){
+        enalbeInputs[0].value = enalbeInputs[1].value;
+        enableName = true;
+    });
+    enalbeInputs[2].addEventListener("click", function(){
+        enalbeInputs[0].value = enalbeInputs[2].value;
+        enableName = false;
+    });
+
+    var canvasSize = 750, originalNumberFontSize = 130, originalNameFontSize = 90, numberFontSize = 0, nameFontSize = 0;
+    var fontRatios = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.89, 0.81, 0.74, 0.67, 0.63, 0.6, 0.58, 0.56, 0.54, 0.52 ,0.5, 0.48, 0.46];
+    var fontY = [0,0,0,0,0,0,0,0,0,0,0,0,5, 8, 10,12, 12, 12, 12, 12, 12, 12, 12, 12, 12];
+
+    var openPreviewButton = document.getElementById('open__preview');
+    var previewModal = document.getElementById('productPreviewModal');
+    var closePreviewButton = document.getElementsByClassName('close__preview')[0];
+    var addressName = document.querySelector('[name="properties[Name]"]');
+    var productPreviewModalContent = document.getElementsByClassName('productPreviewModal__content')[0];
+    
+    var canvas = document.getElementById('previewCanvas');
+    var getcontext = canvas.getContext('2d');
+
+
+    function drawPreviewProduct(isRedraw) {
+
+        if (isRedraw) {
+        getcontext.clearRect(0, 0, canvasSize, canvasSize);
+        }
+
+        if (window.innerWidth < 800) {
+        numberFontSize = originalNumberFontSize * (canvasSize / 750);
+        nameFontSize = originalNameFontSize * (canvasSize / 750);
+        } else {
+        numberFontSize = originalNumberFontSize;
+        nameFontSize = originalNameFontSize;
+        }
+
+        var address_name = addressInput.value;
+        var address_number = numberInput.value;
+
+        var image = new Image();
+        image.onload = function() {
+        getcontext.drawImage(image, 0, 0, canvasSize, canvasSize);
+        };
+        image.src = previewData.dataUrl;
+
+        setTimeout(() => {
+        // draw Address Number
+        getcontext.font = `${numberFontSize}px GOTHIC`;
+        getcontext.font.letterSpacing  = "0px";
+        getcontext.fillStyle = "black";
+        if (isCentered) {
+            getcontext.textAlign = "center";
+            getcontext.fillText(address_number, canvasSize/2, canvasSize * Number(previewData.positions[0].y));
+        } else {
+            getcontext.textAlign = "right";
+            getcontext.fillText(address_number, canvasSize * previewData.positions[0].x, canvasSize * Number(previewData.positions[0].y));
+        }
+
+        if (enableName) {
+            // draw Address Name
+            getcontext.font = `${nameFontSize}px CenturyGothicStencil3`;
+            getcontext.font.letterSpacing  = "0px";
+            getcontext.fillStyle = "white";
+            getcontext.textAlign = "center";
+            getcontext.fillText(address_name, canvasSize/2, (canvasSize) * Number(previewData.positions[1].y), 600 * (canvasSize / 750));            
+        }
+        }, 10);
+        
+    }
+    
+    drawPreviewProduct(false);
+
+    openPreviewButton.onclick = function(){
+        drawPreviewProduct(true);
+        previewModal.classList.add("active");
+    }
+
+    closePreviewButton.onclick = function(){
+        previewModal.classList.remove("active");
+    }
+
+    function resizeCanvas() {
+        if (window.innerWidth < 800) {
+        canvasSize = window.innerWidth * 0.8;
+        productPreviewModalContent.style.height = `${window.innerWidth * 0.9}px`;
+        } else {
+        canvasSize = 750;
+        productPreviewModalContent.style.height = `800px`;
+        }
+        canvas.setAttribute('width', `${canvasSize}px`);
+        canvas.setAttribute('height', `${canvasSize}px`);
+    }
+
+    resizeCanvas();
+
+    window.addEventListener('resize', function(event){
+        resizeCanvas();
+        drawPreviewProduct(true);
+    });
+
+    $('#Name-0-3').keyup(function(){
+        drawPreviewProduct(true);
+    });
+    }
+}
+
+setTimeout(function(){
+    stopSearch();
+},60000);
