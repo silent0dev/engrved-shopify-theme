@@ -1518,12 +1518,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         if (!newVariant) {
           newButton.setAttribute('disabled', 'disabled');
           newButton.removeAttribute('data-action');
-          newButton.classList.add('Button--secondary');
           newButton.innerHTML = window.languages.productFormUnavailable;
         } else {
           if (newVariant['available']) {
             newButton.removeAttribute('disabled');
-            newButton.classList.add(this.options['showPaymentButton'] ? 'Button--secondary' : 'Button--primary');
             newButton.setAttribute('data-action', 'add-to-cart');
 
             if (undefined === this.options['showPriceInButton'] || this.options['showPriceInButton']) {
@@ -1533,7 +1531,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
           } else {
             newButton.setAttribute('disabled', 'disabled');
-            newButton.classList.add('Button--secondary');
             newButton.removeAttribute('data-action');
             newButton.innerHTML = window.languages.productFormSoldOut;
           }

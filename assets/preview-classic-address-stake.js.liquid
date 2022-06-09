@@ -65,8 +65,14 @@ function searchElement() {
 
     function drawPreviewProduct(isRedraw) {
 
+        if (metalColor == 'white') {
+            canvas.style.backgroundColor = 'violet';
+        } else {
+            canvas.style.backgroundColor = 'white';
+        }
+
         if (isRedraw) {
-        getcontext.clearRect(0, 0, canvasSize, canvasSize);
+            getcontext.clearRect(0, 0, canvasSize, canvasSize);
         }
 
         if (window.innerWidth < 800) {
@@ -82,15 +88,18 @@ function searchElement() {
 
         var image = new Image();
         image.onload = function() {
-        getcontext.drawImage(image, 0, 0, canvasSize, canvasSize);
+            getcontext.drawImage(this, 0, 0, canvasSize, canvasSize);
         };
-        image.src = previewData.dataUrl;
-
-        setTimeout(() => {
+        image.src = previewImages[metalColor];
         // draw Address Number
         getcontext.font = `${numberFontSize}px GOTHIC`;
         getcontext.font.letterSpacing  = "0px";
-        getcontext.fillStyle = "black";
+        var grd = getcontext.createLinearGradient(0, 0, canvasSize, 0);
+        var stepLength = metalColors[metalColor].length;
+        for(var i = 0;i < stepLength;i++) {
+            grd.addColorStop(steps[stepLength-1][i], metalColors[metalColor][i]);
+        }
+        getcontext.fillStyle = grd;
         if (isCentered) {
             getcontext.textAlign = "center";
             getcontext.fillText(address_number, canvasSize/2, canvasSize * Number(previewData.positions[0].y));
@@ -98,15 +107,19 @@ function searchElement() {
             getcontext.textAlign = "right";
             getcontext.fillText(address_number, canvasSize * previewData.positions[0].x, canvasSize * Number(previewData.positions[0].y));
         }
+        setTimeout(() => {
 
-        if (enableName) {
-            // draw Address Name
-            getcontext.font = `${nameFontSize}px CenturyGothicStencil3`;
-            getcontext.font.letterSpacing  = "0px";
-            getcontext.fillStyle = "white";
-            getcontext.textAlign = "center";
-            getcontext.fillText(address_name, canvasSize/2, (canvasSize) * Number(previewData.positions[1].y), 600 * (canvasSize / 750));            
-        }
+            if (enableName) {
+                // draw Address Name
+                getcontext.font = `${nameFontSize}px CenturyGothicStencil3`;
+                getcontext.font.letterSpacing  = "0px";
+                getcontext.fillStyle = "white";
+                if (metalColor == 'white') {
+                    getcontext.fillStyle = "violet";
+                }
+                getcontext.textAlign = "center";
+                getcontext.fillText(address_name, canvasSize/2, (canvasSize) * Number(previewData.positions[1].y), 600 * (canvasSize / 750));            
+            }
         }, 10);
         
     }

@@ -22,3 +22,14 @@
  *   bubbles: true
  * }));
  */
+
+$(document).ready(function(){
+    $('.HorizontalList__Item').each(function(){
+        if ($(this).find('input').prop('checked')) {
+            metalColor = $(this).find('label').text().trim().toLowerCase();
+        }
+    });
+    $('.ColorSwatch').click(function(){
+        metalColor = $(this).text().trim().toLowerCase();
+    });
+});

@@ -112,8 +112,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {%- endif -%}
 
     <script src="https://cdn.polyfill.io/v3/polyfill.min.js?unknown=polyfill&features=fetch,Element.prototype.closest,Element.prototype.remove,Element.prototype.classList,Array.prototype.includes,Array.prototype.fill,Object.assign,CustomEvent,IntersectionObserver,IntersectionObserverEntry,URL" defer></script>
+    <script>
+      var metalColors = {
+        "black": ["#000000"],
+        "metallic": ["#939393", "#fdfdfd", "#939393", "#fdfdfd", "#939393"],
+        "bronze": ["#281b0d", "#865528", "#281b0d"],
+        "white": ["#ffffff"],
+        "red": ["#ff0000"],
+        "blue": ["#0000ff"],
+      };
+      var metalColor = 'black';
+      var steps = [[0], [0,1], [0,0.5,1],[0,0.3,0.6,1],[0,0.25,0.5,0.75,1]];
+    </script>
     <script src="{{ 'libs.min.js' | asset_url }}" defer></script>
-    <script src="{{ 'theme.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'theme.js' | asset_url }}" defer></script>
     <script src="{{ 'custom.js' | asset_url }}" defer></script>
 
     <script>
@@ -256,6 +268,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {% if product.metafields.preview.data.value != blank %}
   <script>
     var previewData = JSON.parse('{{product.metafields.preview.data.value | json}}');
+    var previewImages = {
+      "black": '{{ product.metafields.preview_image.black }}',
+      "metallic": '{{ product.metafields.preview_image.metallic }}',
+      "bronze": '{{ product.metafields.preview_image.bronze }}',
+      "white": '{{ product.metafields.preview_image.white }}',
+      "red": '{{ product.metafields.preview_image.red }}',
+      "blue": '{{ product.metafields.preview_image.blue }}'
+    };
   </script>
   <script src="{{ product.metafields.preview.data.value.script | asset_url }}" defer="defer"></script>
   {% endif %}

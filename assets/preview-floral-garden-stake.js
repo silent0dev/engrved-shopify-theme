@@ -29,6 +29,11 @@ function searchElement() {
 
 
     function drawPreviewProduct(isRedraw) {
+        if (metalColor == 'white') {
+            canvas.style.backgroundColor = 'violet';
+        } else {
+            canvas.style.backgroundColor = 'white';
+        }
 
         if (isRedraw) {
         getcontext.clearRect(0, 0, canvasSize, canvasSize);
@@ -49,20 +54,25 @@ function searchElement() {
         image.onload = function() {
         getcontext.drawImage(image, 0, 0, canvasSize, canvasSize);
         };
-        image.src = previewData.dataUrl;
+        image.src = previewImages[metalColor];
 
         setTimeout(() => {
         // draw Address Number
         getcontext.font = `${topFontSize}px ${previewData.positions[0].fontname}`;
         getcontext.font.letterSpacing  = "0px";
-        getcontext.fillStyle = previewData.positions[0].color;
+        var grd = getcontext.createLinearGradient(0, 0, canvasSize, 0);
+        var stepLength = metalColors[metalColor].length;
+        for(var i = 0;i < stepLength;i++) {
+            grd.addColorStop(steps[stepLength-1][i], metalColors[metalColor][i]);
+        }
+        getcontext.fillStyle = grd;
         getcontext.textAlign = "center";
         getcontext.fillText(topText, canvasSize/2, canvasSize * Number(previewData.positions[0].y), 600 * (canvasSize / 750));
 
         // draw Address Name
         getcontext.font = `${bottomFontSize}px ${previewData.positions[1].fontname}`;
         getcontext.font.letterSpacing  = "0px";
-        getcontext.fillStyle = previewData.positions[1].color;
+        getcontext.fillStyle = grd;
         getcontext.textAlign = "center";
         getcontext.fillText(bottomText, canvasSize/2, (canvasSize) * Number(previewData.positions[1].y), 600 * (canvasSize / 750));
         }, 10);
