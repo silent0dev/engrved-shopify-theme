@@ -81,13 +81,13 @@
 }
 
 .close__preview {
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
     position: absolute;
     top: 30px;
     right: 30px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 2px solid orange;
     cursor: pointer;
     z-index: 1000;
 }
@@ -95,8 +95,10 @@
 .close__preview svg {
     width: 14px;
     height: 14px;
-    margin-left: 2px;
-    margin-bottom: 3px;
+    stroke: orange;
+    position: absolute;
+    top: 4px;
+    right: 4px;
 }
 
 #previewCanvas {
@@ -149,3 +151,17 @@ klarna-placement {
         max-width: 100%;
     }
 }
+
+.Cart__Checkout {
+    background-color: #dbb342!important;
+    color: #fff!important;
+    border-color: #fff!important;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Cart__Checkout:hover {
+    background-color: #efd07a!important;
+ }

@@ -29,7 +29,18 @@ $(document).ready(function(){
             metalColor = $(this).find('label').text().trim().toLowerCase();
         }
     });
+
     $('.ColorSwatch').click(function(){
         metalColor = $(this).text().trim().toLowerCase();
+    });
+
+    $(".gf_swatches-selector[data-name=Color]").find('.gf_swatch').each(function(){
+        if ($(this).hasClass('gf_selected')) {
+            metalColor = $(this).data('value').trim().toLowerCase();
+        }
+    });
+
+    $(".gf_swatches-selector[data-name=Color]").find('.gf_swatch').mouseup(function(){
+        metalColor = $(this).data('value').trim().toLowerCase();
     });
 });

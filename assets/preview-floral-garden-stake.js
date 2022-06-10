@@ -30,7 +30,7 @@ function searchElement() {
 
     function drawPreviewProduct(isRedraw) {
         if (metalColor == 'white') {
-            canvas.style.backgroundColor = 'violet';
+            canvas.style.backgroundColor = 'black';
         } else {
             canvas.style.backgroundColor = 'white';
         }

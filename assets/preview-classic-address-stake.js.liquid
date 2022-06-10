@@ -16,7 +16,7 @@ function searchElement() {
     
     var numberInput = document.getElementById('Numbers-0-0');
     var addressInput = document.getElementById('Name-0-3');
-    var enableName = false, isCentered = true;
+    var enableName = false, numberAlign = 'left';
     console.log($('input[name="alignNumber"]'));
     var alignInputs = document.getElementById('infiniteoptions-container').children[1].querySelectorAll('input');
     alignInputs[1].setAttribute('type', 'radio');
@@ -24,14 +24,20 @@ function searchElement() {
     alignInputs[1].setAttribute('checked', 'checked');
     alignInputs[2].setAttribute('type', 'radio');
     alignInputs[2].setAttribute('name', 'alignNumber');
+    alignInputs[3].setAttribute('type', 'radio');
+    alignInputs[3].setAttribute('name', 'alignNumber');
     alignInputs[0].value = alignInputs[1].value;
     alignInputs[1].addEventListener("click", function(){
         alignInputs[0].value = alignInputs[1].value;
-        isCentered = true;
+        numberAlign = 'left';
     });
     alignInputs[2].addEventListener("click", function(){
         alignInputs[0].value = alignInputs[2].value;
-        isCentered = false;
+        numberAlign = 'center';
+    });
+    alignInputs[3].addEventListener("click", function(){
+        alignInputs[0].value = alignInputs[3].value;
+        numberAlign = 'right';
     });
     var enalbeInputs = document.getElementById('infiniteoptions-container').children[2].querySelectorAll('input');
     enalbeInputs[1].setAttribute('type', 'radio');
@@ -66,7 +72,7 @@ function searchElement() {
     function drawPreviewProduct(isRedraw) {
 
         if (metalColor == 'white') {
-            canvas.style.backgroundColor = 'violet';
+            canvas.style.backgroundColor = 'black';
         } else {
             canvas.style.backgroundColor = 'white';
         }
@@ -91,23 +97,28 @@ function searchElement() {
             getcontext.drawImage(this, 0, 0, canvasSize, canvasSize);
         };
         image.src = previewImages[metalColor];
-        // draw Address Number
-        getcontext.font = `${numberFontSize}px GOTHIC`;
-        getcontext.font.letterSpacing  = "0px";
-        var grd = getcontext.createLinearGradient(0, 0, canvasSize, 0);
-        var stepLength = metalColors[metalColor].length;
-        for(var i = 0;i < stepLength;i++) {
-            grd.addColorStop(steps[stepLength-1][i], metalColors[metalColor][i]);
-        }
-        getcontext.fillStyle = grd;
-        if (isCentered) {
-            getcontext.textAlign = "center";
-            getcontext.fillText(address_number, canvasSize/2, canvasSize * Number(previewData.positions[0].y));
-        } else {
-            getcontext.textAlign = "right";
-            getcontext.fillText(address_number, canvasSize * previewData.positions[0].x, canvasSize * Number(previewData.positions[0].y));
-        }
+        
         setTimeout(() => {
+
+            // draw Address Number
+            getcontext.font = `${numberFontSize}px GOTHIC`;
+            getcontext.font.letterSpacing  = "0px";
+            var grd = getcontext.createLinearGradient(0, 0, canvasSize, 0);
+            var stepLength = metalColors[metalColor].length;
+            for(var i = 0;i < stepLength;i++) {
+                grd.addColorStop(steps[stepLength-1][i], metalColors[metalColor][i]);
+            }
+            getcontext.fillStyle = grd;
+            if (numberAlign == 'center') {
+                getcontext.textAlign = "center";
+                getcontext.fillText(address_number, canvasSize/2, canvasSize * Number(previewData.positions[0].y));
+            } else if (numberAlign == 'right') {
+                getcontext.textAlign = "right";
+                getcontext.fillText(address_number, canvasSize * previewData.positions[0].x, canvasSize * Number(previewData.positions[0].y));
+            } else {
+                getcontext.textAlign = "left";
+                getcontext.fillText(address_number, canvasSize - canvasSize * previewData.positions[0].x, canvasSize * Number(previewData.positions[0].y));
+            }
 
             if (enableName) {
                 // draw Address Name
@@ -115,7 +126,7 @@ function searchElement() {
                 getcontext.font.letterSpacing  = "0px";
                 getcontext.fillStyle = "white";
                 if (metalColor == 'white') {
-                    getcontext.fillStyle = "violet";
+                    getcontext.fillStyle = "black";
                 }
                 getcontext.textAlign = "center";
                 getcontext.fillText(address_name, canvasSize/2, (canvasSize) * Number(previewData.positions[1].y), 600 * (canvasSize / 750));            
