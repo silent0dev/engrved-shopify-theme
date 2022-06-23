@@ -28,15 +28,11 @@ function searchElement() {
     var getcontext = canvas.getContext('2d');
 
 
-    function drawPreviewProduct(isRedraw) {
+    function drawPreviewProduct() {
         if (metalColor == 'white') {
             canvas.style.backgroundColor = 'black';
         } else {
             canvas.style.backgroundColor = 'white';
-        }
-
-        if (isRedraw) {
-        getcontext.clearRect(0, 0, canvasSize, canvasSize);
         }
 
         var bottomText = bottomInput.value.toUpperCase();
@@ -60,34 +56,28 @@ function searchElement() {
         // draw Address Number
         getcontext.font = `${topFontSize}px ${previewData.positions[0].fontname}`;
         getcontext.font.letterSpacing  = "0px";
-        var grd = getcontext.createLinearGradient(0, 0, canvasSize, 0);
-        var stepLength = metalColors[metalColor].length;
-        for(var i = 0;i < stepLength;i++) {
-            grd.addColorStop(steps[stepLength-1][i], metalColors[metalColor][i]);
-        }
-        getcontext.fillStyle = grd;
+        getcontext.fillStyle = metalColors[metalColor];
         getcontext.textAlign = "center";
         getcontext.fillText(topText, canvasSize/2, canvasSize * Number(previewData.positions[0].y), 600 * (canvasSize / 750));
 
         // draw Address Name
         getcontext.font = `${bottomFontSize}px ${previewData.positions[1].fontname}`;
         getcontext.font.letterSpacing  = "0px";
-        getcontext.fillStyle = grd;
+        getcontext.fillStyle = metalColors[metalColor];
         getcontext.textAlign = "center";
         getcontext.fillText(bottomText, canvasSize/2, (canvasSize) * Number(previewData.positions[1].y), 600 * (canvasSize / 750));
-        }, 10);
+        }, 100);
         
     }
-    
-    drawPreviewProduct(false);
 
     openPreviewButton.onclick = function(){
-        drawPreviewProduct(true);
+        drawPreviewProduct();
         previewModal.classList.add("active");
     }
 
     closePreviewButton.onclick = function(){
         previewModal.classList.remove("active");
+        getcontext.clearRect(0, 0, canvasSize, canvasSize);
     }
 
     function resizeCanvas() {
@@ -103,19 +93,25 @@ function searchElement() {
     }
 
     resizeCanvas();
+    getcontext.clearRect(0, 0, canvasSize, canvasSize);
 
     window.addEventListener('resize', function(event){
-        resizeCanvas();
-        drawPreviewProduct(true);
+        if ($(window).width() > 750) {
+            resizeCanvas();
+            drawPreviewProduct();
+        }
     });
 
-    $('#Top Text_copy-0-0').keyup(function(){
-        drawPreviewProduct(true);
+    $(document).on('change keyup', '#Top Text_copy-0-0', function(){
+        getcontext.clearRect(0, 0, canvasSize, canvasSize);
+        drawPreviewProduct();
     });
 
-    $('#Bottom Text-0-1').keyup(function(){
-        drawPreviewProduct(true);
+    $(document).on('change keyup', '#Bottom Text-0-1', function(){
+        getcontext.clearRect(0, 0, canvasSize, canvasSize);
+        drawPreviewProduct();
     });
+
     }
 }
 
